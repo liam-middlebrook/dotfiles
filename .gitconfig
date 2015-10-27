@@ -1,0 +1,7 @@
+[user]
+	name = Liam Middlebrook
+	email = liammiddlebrook@gmail.com
+[push]
+	default = current
+[remote "origin"]
+	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
