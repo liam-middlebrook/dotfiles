@@ -15,6 +15,8 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin on
 
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " True gui colors in terminal
 set number
 set visualbell
 set expandtab
@@ -43,6 +45,8 @@ imap <C-K> <c-o>:pyf ~/.clang-format/clang-format.py<cr>
 colorscheme badwolf
 hi Normal ctermbg=none
 hi NonText ctermbg=none 
+hi Normal guibg=none
+hi NonText guibg=none 
 
 " This makes it autowrap at 80 characters wide, and allows you to type e.g. gqq
 " in Normal mode to reindent the current paragraph.
