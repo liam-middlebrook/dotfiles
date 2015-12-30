@@ -34,3 +34,4 @@ export PATH=${PATH}:/home/liam/repos/cpctelera/cpctelera/tools/scripts
 
 source ~/.private_exports
 ###CPCTELERA_END 
+stty erase '^?'
