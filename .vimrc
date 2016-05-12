@@ -12,6 +12,7 @@ Plugin 'sjl/badwolf'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kyuhi/vim-emoji-complete'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ChesleyTan/wordCount.vim'
 call vundle#end()
 filetype plugin on
 
@@ -24,7 +25,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 retab
-
+syntax on
 set fdm=syntax
 
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
@@ -85,6 +86,8 @@ set incsearch
 " every time you open a file. Some find this annoying.
 autocmd BufRead * cd %:p:h
 
-
+" Set word count at statusline
+set statusline=%F
+set statusline+=\ \-\ Word\ Count\:\ %{wordCount#WordCount()}
 set exrc
 set secure
