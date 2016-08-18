@@ -7,13 +7,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+export XDG_CONFIG_HOME=$HOME/config
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
 if [ -f /usr/bin/nvim ]; then
     alias vim=nvim
+    export EDITOR=nvim
 fi
-export EDITOR=vim
 
 export GOPATH=/home/liam/repos/golang
 # added by travis gem
@@ -21,8 +22,6 @@ export GOPATH=/home/liam/repos/golang
 [ -f /home/liam/.travis/travis.sh ] && source /home/liam/.travis/travis.sh
 
 source ~/.private_exports
-
-stty erase '^?'
 
 export GPGKEY="$(gpg -K | awk 'NR==3 {print $2}' | sed 's/2048R\///g')"
 
